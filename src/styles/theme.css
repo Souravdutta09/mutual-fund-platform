@@ -1,0 +1,164 @@
+/* Custom Fintech Theme - Premium & Trust-Focused */
+:root {
+  /* Primary Colors - Warm Professional Palette */
+  --color-primary: #1a1a1a; /* Charcoal/Near-black */
+  --color-primary-light: #2d2d2d; /* Lighter charcoal */
+  --color-primary-dark: #0a0a0a; /* Near-black */
+  
+  /* Neutral Grays */
+  --color-gray-50: #fafafa; /* Soft off-white */
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040; /* Slate/graphite */
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  
+  /* Accent Colors - Warm & Professional */
+  --color-accent: #6b7050; /* Muted olive green */
+  --color-accent-light: #8b9155;
+  --color-accent-dark: #4a4e38;
+  
+  /* Secondary Accent */
+  --color-secondary: #b08968; /* Warm copper/amber */
+  --color-secondary-light: #c9a887;
+  --color-secondary-dark: #8b6f47;
+  
+  /* Semantic Colors */
+  --color-success: #4a5d3a; /* Forest green */
+  --color-warning: #8b6914; /* Warm amber */
+  --color-error: #7f2d2d; /* Muted red */
+  --color-info: #2d4a4a; /* Dark teal */
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --bg-dark: #1a1a1a;
+  --bg-card: #ffffff;
+  --bg-overlay: rgba(26, 26, 26, 0.8);
+  
+  /* Border Colors */
+  --border-light: #e5e5e5;
+  --border-medium: #d4d4d4;
+  --border-dark: #a3a3a3;
+  
+  /* Text Colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --text-inverse: #ffffff;
+  --text-muted: #a3a3a3;
+  
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px 0 rgba(26, 26, 26, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(26, 26, 26, 0.1), 0 2px 4px -1px rgba(26, 26, 26, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(26, 26, 26, 0.1), 0 4px 6px -2px rgba(26, 26, 26, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(26, 26, 26, 0.1), 0 10px 10px -5px rgba(26, 26, 26, 0.04);
+}
+
+/* Tailwind Custom Classes */
+@layer utilities {
+  /* Navbar Theme */
+  .navbar-bg {
+    @apply bg-white border-gray-200;
+  }
+  
+  .navbar-text {
+    @apply text-gray-700 hover:text-gray-900;
+  }
+  
+  .navbar-brand {
+    @apply text-gray-900 hover:text-accent;
+  }
+  
+  /* Button Themes */
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-dark focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-200;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-200;
+  }
+  
+  /* Card Themes */
+  .card {
+    @apply bg-white border border-gray-200 shadow-sm;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-md hover:border-gray-300 transition-all duration-200;
+  }
+  
+  .card-header {
+    @apply border-b border-gray-200 bg-gray-50;
+  }
+  
+  /* Background Themes */
+  .bg-page {
+    @apply bg-gray-50;
+  }
+  
+  .bg-section {
+    @apply bg-white;
+  }
+  
+  /* Footer Theme */
+  .footer-bg {
+    @apply bg-gray-900 text-gray-300;
+  }
+  
+  .footer-text {
+    @apply text-gray-400 hover:text-gray-200;
+  }
+  
+  .footer-link {
+    @apply text-gray-400 hover:text-gray-200;
+  }
+  
+  /* Text Themes */
+  .text-primary {
+    @apply text-gray-900;
+  }
+  
+  .text-secondary {
+    @apply text-gray-600;
+  }
+  
+  .text-muted {
+    @apply text-gray-500;
+  }
+  
+  /* Accent Elements */
+  .accent-text {
+    @apply text-accent;
+  }
+  
+  .accent-bg {
+    @apply bg-accent;
+  }
+  
+  .accent-border {
+    @apply border-accent;
+  }
+  
+  /* Secondary Accent */
+  .secondary-text {
+    @apply text-secondary;
+  }
+  
+  .secondary-bg {
+    @apply bg-secondary;
+  }
+  
+  .secondary-border {
+    @apply border-secondary;
+  }
+}

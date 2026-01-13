@@ -1,0 +1,130 @@
+/* Theme Utility Classes for Quick Implementation */
+
+/* Navbar Updated Classes */
+.navbar-updated {
+  @apply bg-white border-gray-200 shadow-custom-sm;
+}
+
+.navbar-brand-updated {
+  @apply text-primary hover:text-accent transition-colors duration-200;
+}
+
+.navbar-link-updated {
+  @apply text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200;
+}
+
+.navbar-cta-updated {
+  @apply bg-accent text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-accent-dark transition-all duration-200 shadow-custom-sm;
+}
+
+.navbar-cta-secondary-updated {
+  @apply text-gray-700 hover:text-primary px-4 py-2 text-sm font-medium transition-colors duration-200;
+}
+
+/* Button Updated Classes */
+.btn-primary-updated {
+  @apply bg-accent text-white px-6 py-3 font-medium rounded-lg hover:bg-accent-dark focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200 shadow-custom-sm;
+}
+
+.btn-secondary-updated {
+  @apply bg-gray-100 text-gray-700 px-6 py-3 font-medium rounded-lg hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-200;
+}
+
+.btn-outline-updated {
+  @apply border border-gray-300 text-gray-700 px-6 py-3 font-medium rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-200;
+}
+
+/* Card Updated Classes */
+.card-updated {
+  @apply bg-white border border-gray-200 rounded-lg shadow-custom-sm;
+}
+
+.card-hover-updated {
+  @apply hover:shadow-custom-md hover:border-gray-300 transition-all duration-200;
+}
+
+.card-header-updated {
+  @apply border-b border-gray-200 bg-gray-50 px-6 py-4;
+}
+
+.card-body-updated {
+  @apply px-6 py-4;
+}
+
+/* Background Updated Classes */
+.bg-page-updated {
+  @apply bg-gray-50 min-h-screen;
+}
+
+.bg-section-updated {
+  @apply bg-white;
+}
+
+.bg-subtle-updated {
+  @apply bg-gray-50;
+}
+
+/* Footer Updated Classes */
+.footer-updated {
+  @apply bg-primary text-gray-300 border-t border-gray-800;
+}
+
+.footer-brand-updated {
+  @apply text-white font-bold text-xl mb-3;
+}
+
+.footer-link-updated {
+  @apply text-gray-400 hover:text-gray-200 transition-colors duration-200;
+}
+
+.footer-text-updated {
+  @apply text-gray-500 text-sm;
+}
+
+/* Text Updated Classes */
+.text-primary-updated {
+  @apply text-primary;
+}
+
+.text-secondary-updated {
+  @apply text-gray-600;
+}
+
+.text-muted-updated {
+  @apply text-gray-500;
+}
+
+.text-accent-updated {
+  @apply text-accent;
+}
+
+/* Accent Elements */
+.accent-badge {
+  @apply bg-accent text-white text-xs px-2 py-1 rounded-full;
+}
+
+.accent-border {
+  @apply border-l-4 border-accent;
+}
+
+.secondary-highlight {
+  @apply bg-secondary text-white px-3 py-1 rounded-md text-sm;
+}
+
+/* Trust Elements */
+.trust-indicator {
+  @apply flex items-center space-x-2 text-gray-600 text-sm;
+}
+
+.trust-badge {
+  @apply bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium;
+}
+
+/* Risk Disclaimer */
+.risk-disclaimer {
+  @apply bg-amber-50 border border-amber-200 rounded-lg p-4;
+}
+
+.risk-text {
+  @apply text-amber-800 text-sm;
+}
