@@ -40,31 +40,31 @@ const Navbar = () => {
                   onMouseLeave={() => setIsMutualFundsDropdownOpen(false)}
                   className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2"
                 >
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+            <Link href="/funds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     Equity Funds
                   </Link>
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                  <Link href="/funds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     Debt Funds
                   </Link>
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                  <Link href="/funds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     Hybrid Funds
                   </Link>
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                  <Link href="/funds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     Tax Saving (ELSS)
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link href="/sip-calculator" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
               SIP
             </Link>
 
-            <Link href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
               Portfolio
             </Link>
 
-            <Link href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link href="/sip-calculator" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
               Calculators
             </Link>
 
@@ -86,13 +86,13 @@ const Navbar = () => {
                   onMouseLeave={() => setIsLearnDropdownOpen(false)}
                   className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2"
                 >
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                  <Link href="/learn" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     Beginner Guide
                   </Link>
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                  <Link href="/learn" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     SIP Explained
                   </Link>
-                  <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                  <Link href="/learn" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     Market Basics
                   </Link>
                 </div>
@@ -102,10 +102,10 @@ const Navbar = () => {
 
           {/* Right - Actions (Desktop) */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="#" className="text-gray-700 hover:text-gray-900 px-4 py-2 text-sm font-medium transition-colors">
+            <Link href="/auth/login" className="text-gray-700 hover:text-gray-900 px-4 py-2 text-sm font-medium transition-colors">
               Login
             </Link>
-            <Link href="#" className="bg-blue-600 text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            <Link href="/auth/signup" className="bg-blue-600 text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
               Get Started
             </Link>
           </div>
@@ -144,31 +144,31 @@ const Navbar = () => {
                 </button>
                 {isMutualFundsDropdownOpen && (
                   <div className="pl-6 py-2 space-y-1">
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/funds" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       Equity Funds
                     </Link>
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/funds" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       Debt Funds
                     </Link>
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/funds" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       Hybrid Funds
                     </Link>
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/funds" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       Tax Saving (ELSS)
                     </Link>
                   </div>
                 )}
               </div>
 
-              <Link href="#" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
+              <Link href="/sip-calculator" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
                 SIP
               </Link>
 
-              <Link href="#" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
+              <Link href="/portfolio" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
                 Portfolio
               </Link>
 
-              <Link href="#" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
+              <Link href="/sip-calculator" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
                 Calculators
               </Link>
 
@@ -185,13 +185,13 @@ const Navbar = () => {
                 </button>
                 {isLearnDropdownOpen && (
                   <div className="pl-6 py-2 space-y-1">
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/learn" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       Beginner Guide
                     </Link>
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/learn" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       SIP Explained
                     </Link>
-                    <Link href="#" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
+                    <Link href="/learn" className="block text-gray-600 hover:text-gray-900 px-3 py-2 text-sm">
                       Market Basics
                     </Link>
                   </div>
@@ -199,10 +199,10 @@ const Navbar = () => {
               </div>
 
               <div className="border-t border-gray-200 pt-4 mt-4 space-y-3">
-                <Link href="#" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
+                <Link href="/auth/login" className="block text-gray-700 hover:text-gray-900 px-3 py-2 text-base font-medium transition-colors">
                   Login
                 </Link>
-                <Link href="#" className="block bg-blue-600 text-white px-3 py-2 text-base font-medium rounded-lg hover:bg-blue-700 transition-colors text-center">
+                <Link href="/auth/signup" className="block bg-blue-600 text-white px-3 py-2 text-base font-medium rounded-lg hover:bg-blue-700 transition-colors text-center">
                   Get Started
                 </Link>
               </div>

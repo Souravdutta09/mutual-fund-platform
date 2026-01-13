@@ -1,0 +1,186 @@
+/* UTI-Style Institutional Theme - Conservative Mutual Fund Aesthetic */
+
+/* Color Palette */
+:root {
+  /* Primary Colors - Deep Navy/Indigo */
+  --primary-navy: #1e3a5f;
+  --primary-navy-light: #2d4a73;
+  --primary-navy-dark: #152842;
+  
+  /* Secondary Colors - Muted Blue */
+  --secondary-blue: #4a6fa5;
+  --secondary-blue-light: #5d7fb8;
+  --secondary-blue-dark: #3a5a8a;
+  
+  /* Background Colors - Light Blue/Off-White */
+  --bg-primary: #f8fafb;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e8f1f8;
+  --bg-white: #ffffff;
+  
+  /* Text Colors - Dark Navy/Charcoal */
+  --text-primary: #1a202c;
+  --text-secondary: #2d3748;
+  --text-muted: #4a5568;
+  --text-light: #718096;
+  
+  /* Accent Colors - Soft Blue */
+  --accent-blue: #5b8def;
+  --accent-blue-light: #7ba3f1;
+  --accent-blue-dark: #4a7ddd;
+  
+  /* Border & UI Elements */
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e0;
+  --border-dark: #a0aec0;
+  
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 3px 0 rgba(30, 58, 95, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(30, 58, 95, 0.1), 0 2px 4px -1px rgba(30, 58, 95, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(30, 58, 95, 0.1), 0 4px 6px -2px rgba(30, 58, 95, 0.05);
+}
+
+/* Tailwind Utility Classes */
+@layer utilities {
+  /* Navbar Theme */
+  .navbar-uti {
+    @apply bg-white border-b border-gray-200 shadow-sm;
+  }
+  
+  .navbar-brand-uti {
+    @apply text-primary-navy hover:text-secondary-blue transition-colors duration-200;
+  }
+  
+  .navbar-link-uti {
+    @apply text-text-secondary hover:text-primary-navy px-3 py-2 text-sm font-medium transition-colors duration-200;
+  }
+  
+  .navbar-cta-uti {
+    @apply bg-accent-blue text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-accent-blue-dark transition-all duration-200 shadow-sm;
+  }
+  
+  .navbar-cta-secondary-uti {
+    @apply text-text-secondary hover:text-primary-navy px-4 py-2 text-sm font-medium transition-colors duration-200;
+  }
+  
+  /* Button Theme */
+  .btn-primary-uti {
+    @apply bg-accent-blue text-white px-6 py-3 font-medium rounded-lg hover:bg-accent-blue-dark focus:ring-2 focus:ring-accent-blue focus:ring-offset-2 transition-all duration-200 shadow-sm;
+  }
+  
+  .btn-secondary-uti {
+    @apply bg-white border border-gray-300 text-text-primary px-6 py-3 font-medium rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-200 shadow-sm;
+  }
+  
+  .btn-outline-uti {
+    @apply border border-secondary-blue text-secondary-blue px-6 py-3 font-medium rounded-lg hover:bg-secondary-blue hover:text-white focus:ring-2 focus:ring-secondary-blue focus:ring-offset-2 transition-all duration-200;
+  }
+  
+  /* Card Theme */
+  .card-uti {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm;
+  }
+  
+  .card-hover-uti {
+    @apply hover:shadow-md hover:border-gray-300 transition-all duration-200;
+  }
+  
+  .card-header-uti {
+    @apply border-b border-gray-200 bg-gray-50 px-6 py-4;
+  }
+  
+  .card-body-uti {
+    @apply px-6 py-4;
+  }
+  
+  /* Section Backgrounds */
+  .section-primary-uti {
+    @apply bg-bg-primary;
+  }
+  
+  .section-secondary-uti {
+    @apply bg-bg-secondary;
+  }
+  
+  .section-tertiary-uti {
+    @apply bg-bg-tertiary;
+  }
+  
+  .section-white-uti {
+    @apply bg-white;
+  }
+  
+  /* Footer Theme */
+  .footer-uti {
+    @apply bg-primary-navy text-gray-300 border-t border-gray-700;
+  }
+  
+  .footer-brand-uti {
+    @apply text-white font-bold text-xl mb-3;
+  }
+  
+  .footer-link-uti {
+    @apply text-gray-400 hover:text-white transition-colors duration-200;
+  }
+  
+  .footer-text-uti {
+    @apply text-gray-500 text-sm;
+  }
+  
+  /* Text Theme */
+  .text-primary-uti {
+    @apply text-text-primary;
+  }
+  
+  .text-secondary-uti {
+    @apply text-text-secondary;
+  }
+  
+  .text-muted-uti {
+    @apply text-text-muted;
+  }
+  
+  .text-accent-uti {
+    @apply text-accent-blue;
+  }
+  
+  /* Accent Elements */
+  .accent-badge-uti {
+    @apply bg-accent-blue text-white text-xs px-2 py-1 rounded-full;
+  }
+  
+  .accent-border-uti {
+    @apply border-l-4 border-accent-blue;
+  }
+  
+  .trust-indicator-uti {
+    @apply flex items-center space-x-2 text-text-muted text-sm;
+  }
+  
+  .trust-badge-uti {
+    @apply bg-gray-100 text-text-secondary px-3 py-2 rounded-lg text-sm font-medium;
+  }
+  
+  /* Risk Disclaimer */
+  .risk-disclaimer-uti {
+    @apply bg-amber-50 border border-amber-200 rounded-lg p-4;
+  }
+  
+  .risk-text-uti {
+    @apply text-amber-800 text-sm;
+  }
+  
+  /* Divider */
+  .divider-uti {
+    @apply border-t border-gray-200;
+  }
+  
+  /* Link Theme */
+  .link-uti {
+    @apply text-accent-blue hover:text-accent-blue-dark transition-colors duration-200;
+  }
+  
+  .link-muted-uti {
+    @apply text-text-muted hover:text-text-secondary transition-colors duration-200;
+  }
+}

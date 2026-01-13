@@ -1,0 +1,78 @@
+/* Image-Inspired Theme - Modern Blue & Navy */
+
+/* Color Palette Reference */
+:root {
+  --primary-navy: #0f172a;
+  --secondary-blue: #3b82f6;
+  --bg-primary: #f8fafc;
+  --text-primary: #0f172a;
+  --accent-blue: #3b82f6;
+}
+
+/* Ready-to-use Tailwind Classes for Image Theme */
+
+/* Navbar */
+.navbar-image { @apply bg-white border-b border-gray-200 shadow-sm; }
+.navbar-brand-image { @apply text-primary-navy hover:text-secondary-blue transition-colors duration-200; }
+.navbar-link-image { @apply text-text-secondary hover:text-primary-navy px-3 py-2 text-sm font-medium transition-colors duration-200; }
+.navbar-cta-image { @apply bg-secondary-blue text-white px-6 py-2 text-sm font-medium rounded-lg hover:bg-secondary-blue-dark transition-all duration-200 shadow-sm; }
+
+/* Buttons */
+.btn-primary-image { @apply bg-secondary-blue text-white px-6 py-3 font-medium rounded-lg hover:bg-secondary-blue-dark focus:ring-2 focus:ring-secondary-blue focus:ring-offset-2 transition-all duration-200 shadow-sm; }
+.btn-secondary-image { @apply bg-white border border-gray-300 text-text-primary px-6 py-3 font-medium rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-200 shadow-sm; }
+.btn-outline-image { @apply border border-secondary-blue text-secondary-blue px-6 py-3 font-medium rounded-lg hover:bg-secondary-blue hover:text-white focus:ring-2 focus:ring-secondary-blue focus:ring-offset-2 transition-all duration-200; }
+
+/* Cards */
+.card-image { @apply bg-white border border-gray-200 rounded-lg shadow-sm; }
+.card-hover-image { @apply hover:shadow-md hover:border-gray-300 transition-all duration-200; }
+.card-header-image { @apply border-b border-gray-200 bg-gray-50 px-6 py-4; }
+.card-body-image { @apply px-6 py-4; }
+
+/* Section Backgrounds */
+.section-primary-image { @apply bg-bg-primary; }
+.section-secondary-image { @apply bg-bg-secondary; }
+.section-tertiary-image { @apply bg-bg-tertiary; }
+.section-white-image { @apply bg-white; }
+
+/* Footer */
+.footer-image { @apply bg-primary-navy text-gray-300 border-t border-gray-700; }
+.footer-brand-image { @apply text-white font-bold text-xl mb-3; }
+.footer-link-image { @apply text-gray-400 hover:text-white transition-colors duration-200; }
+.footer-text-image { @apply text-gray-500 text-sm; }
+
+/* Text */
+.text-primary-image { @apply text-text-primary; }
+.text-secondary-image { @apply text-text-secondary; }
+.text-muted-image { @apply text-text-muted; }
+.text-accent-image { @apply text-accent-blue; }
+
+/* Links */
+.link-image { @apply text-accent-blue hover:text-secondary-blue-dark transition-colors duration-200; }
+.link-muted-image { @apply text-text-muted hover:text-text-secondary transition-colors duration-200; }
+
+/* Accent Elements */
+.accent-badge-image { @apply bg-accent-blue text-white text-xs px-2 py-1 rounded-full; }
+.accent-border-image { @apply border-l-4 border-accent-blue; }
+
+/* Success/Warning Elements */
+.success-badge-image { @apply bg-accent-green text-white text-xs px-2 py-1 rounded-full; }
+.warning-badge-image { @apply bg-accent-orange text-white text-xs px-2 py-1 rounded-full; }
+
+/* Trust Elements */
+.trust-indicator-image { @apply flex items-center space-x-2 text-text-muted text-sm; }
+.trust-badge-image { @apply bg-gray-100 text-text-secondary px-3 py-2 rounded-lg text-sm font-medium; }
+
+/* Risk Disclaimer */
+.risk-disclaimer-image { @apply bg-amber-50 border border-amber-200 rounded-lg p-4; }
+.risk-text-image { @apply text-amber-800 text-sm; }
+
+/* Divider */
+.divider-image { @apply border-t border-gray-200; }
+
+/* Hero Section */
+.hero-image { @apply bg-gradient-to-br from-primary-navy to-secondary-blue text-white; }
+.hero-text-image { @apply text-white; }
+
+/* Stats/Numbers */
+.stat-number-image { @apply text-3xl font-bold text-accent-blue; }
+.stat-label-image { @apply text-text-muted text-sm; }
