@@ -17,31 +17,20 @@ export async function POST(request: Request) {
         const body = await request.json();
         const parsed = enquirySchema.parse(body);
 
-        // Save lead to MongoDB
-        const lead = await createLead({
-            name: parsed.name,
-            email: parsed.email,
-            phone: parsed.phone,
-            fundName: parsed.fundName || undefined,
-            amount: parsed.amount || undefined,
-            message: parsed.message || undefined,
+        // ── 1. Send email notification (PRIMARY — must succeed) ──
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
         });
 
-        // Send email notification
-        try {
-            const transporter = nodemailer.createTransport({
-                service: 'gmail',
-                auth: {
-                    user: process.env.EMAIL_USER,
-                    pass: process.env.EMAIL_PASS,
-                },
-            });
-
-            await transporter.sendMail({
-                from: process.env.EMAIL_USER,
-                to: process.env.EMAIL_USER,
-                subject: `New Consultation Request from ${parsed.name}`,
-                html: `
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
+            subject: `New Consultation Request from ${parsed.name}`,
+            html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #059669;">New Consultation Request</h2>
             <table style="width: 100%; border-collapse: collapse;">
@@ -55,10 +44,22 @@ export async function POST(request: Request) {
             <p style="color: #6b7280; font-size: 12px; margin-top: 20px;">This enquiry was received via the website.</p>
           </div>
         `,
+        });
+
+        // ── 2. Save lead to MongoDB (BEST-EFFORT — never blocks the response) ──
+        let lead = null;
+        try {
+            lead = await createLead({
+                name: parsed.name,
+                email: parsed.email,
+                phone: parsed.phone,
+                fundName: parsed.fundName || undefined,
+                amount: parsed.amount || undefined,
+                message: parsed.message || undefined,
             });
-        } catch (emailError) {
-            // Log email error but don't fail the request — lead is already saved
-            console.error('Failed to send email notification:', emailError);
+        } catch (dbError) {
+            // Log DB error but don't fail — email was already sent successfully
+            console.error('Failed to save lead to MongoDB (email was sent):', dbError);
         }
 
         return NextResponse.json(
