@@ -161,7 +161,7 @@ const SIPCalculator = () => {
                 {calculationType === 'goal' && (
                   <div className="flex justify-between items-center p-3.5 bg-emerald-50 rounded-xl border border-emerald-100">
                     <span className="text-sm text-slate-700 font-semibold">Required Monthly SIP</span>
-                    <span className="text-sm font-bold text-emerald-700">{'\u20B9'}{(results as any).requiredSIP?.toLocaleString('en-IN')}</span>
+                    <span className="text-sm font-bold text-emerald-700">{'\u20B9'}{(results as { requiredSIP?: number }).requiredSIP?.toLocaleString('en-IN')}</span>
                   </div>
                 )}
               </div>

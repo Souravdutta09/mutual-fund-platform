@@ -1,3 +1,4 @@
+import { ObjectId } from 'mongodb';
 import clientPromise from './mongodb';
 import { User, Portfolio, Transaction, InvestmentGoal } from './database-types';
 import bcrypt from 'bcryptjs';
@@ -13,14 +14,14 @@ export class DatabaseService {
   static async createUser(userData: Omit<User, '_id' | 'createdAt' | 'updatedAt'>) {
     const db = await this.getDB();
     const hashedPassword = await bcrypt.hash(userData.password, 10);
-    
+
     const user = {
       ...userData,
       password: hashedPassword,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
-    
+
     const result = await db.collection('users').insertOne(user);
     return { ...user, _id: result.insertedId.toString() };
   }
@@ -28,13 +29,15 @@ export class DatabaseService {
   static async getUserByEmail(email: string): Promise<User | null> {
     const db = await this.getDB();
     const user = await db.collection('users').findOne({ email });
-    return user as User | null;
+    if (!user) return null;
+    return { ...user, _id: user._id.toString() } as unknown as User;
   }
 
   static async getUserById(id: string): Promise<User | null> {
     const db = await this.getDB();
-    const user = await db.collection('users').findOne({ _id: id });
-    return user as User | null;
+    const user = await db.collection('users').findOne({ _id: new ObjectId(id) });
+    if (!user) return null;
+    return { ...user, _id: user._id.toString() } as unknown as User;
   }
 
   static async updateUser(id: string, updateData: Partial<User>) {
@@ -43,13 +46,13 @@ export class DatabaseService {
       ...updateData,
       updatedAt: new Date(),
     };
-    
+
     if (updateData.password) {
       updateDoc.password = await bcrypt.hash(updateData.password, 10);
     }
-    
+
     const result = await db.collection('users').updateOne(
-      { _id: id },
+      { _id: new ObjectId(id) },
       { $set: updateDoc }
     );
     return result.modifiedCount > 0;
@@ -63,36 +66,37 @@ export class DatabaseService {
   static async getUserPortfolio(userId: string): Promise<Portfolio | null> {
     const db = await this.getDB();
     const portfolio = await db.collection('portfolios').findOne({ userId });
-    return portfolio as Portfolio | null;
+    if (!portfolio) return null;
+    return { ...portfolio, _id: portfolio._id.toString() } as unknown as Portfolio;
   }
 
   static async createOrUpdatePortfolio(portfolioData: Omit<Portfolio, '_id' | 'createdAt' | 'updatedAt'>) {
     const db = await this.getDB();
-    
+
     const portfolio = {
       ...portfolioData,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
-    
+
     const result = await db.collection('portfolios').updateOne(
       { userId: portfolioData.userId },
       { $set: portfolio },
       { upsert: true }
     );
-    
+
     return result.modifiedCount > 0 || result.upsertedCount > 0;
   }
 
   // Transaction Operations
   static async createTransaction(transactionData: Omit<Transaction, '_id' | 'createdAt'>) {
     const db = await this.getDB();
-    
+
     const transaction = {
       ...transactionData,
       createdAt: new Date(),
     };
-    
+
     const result = await db.collection('transactions').insertOne(transaction);
     return { ...transaction, _id: result.insertedId.toString() };
   }
@@ -105,20 +109,20 @@ export class DatabaseService {
       .sort({ date: -1 })
       .limit(limit)
       .toArray();
-    
-    return transactions as Transaction[];
+
+    return transactions.map(t => ({ ...t, _id: t._id.toString() })) as unknown as Transaction[];
   }
 
   // Investment Goals Operations
   static async createGoal(goalData: Omit<InvestmentGoal, '_id' | 'createdAt' | 'updatedAt'>) {
     const db = await this.getDB();
-    
+
     const goal = {
       ...goalData,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
-    
+
     const result = await db.collection('goals').insertOne(goal);
     return { ...goal, _id: result.insertedId.toString() };
   }
@@ -126,7 +130,7 @@ export class DatabaseService {
   static async getUserGoals(userId: string) {
     const db = await this.getDB();
     const goals = await db.collection('goals').find({ userId }).toArray();
-    return goals as InvestmentGoal[];
+    return goals.map(g => ({ ...g, _id: g._id.toString() })) as unknown as InvestmentGoal[];
   }
 
   static async updateGoal(id: string, updateData: Partial<InvestmentGoal>) {
@@ -135,9 +139,9 @@ export class DatabaseService {
       ...updateData,
       updatedAt: new Date(),
     };
-    
+
     const result = await db.collection('goals').updateOne(
-      { _id: id },
+      { _id: new ObjectId(id) },
       { $set: updateDoc }
     );
     return result.modifiedCount > 0;

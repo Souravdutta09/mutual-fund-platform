@@ -15,7 +15,7 @@ export default function LearnPage() {
             Master the Art of <span className="text-emerald-400">Wealth Creation</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-            Investing isn't just about numbers; it's about securing your future. Learn why mutual funds are the preferred choice for millions of smart investors.
+            Investing isn&apos;t just about numbers; it&apos;s about securing your future. Learn why mutual funds are the preferred choice for millions of smart investors.
           </p>
         </div>
       </section>
@@ -316,9 +316,9 @@ export default function LearnPage() {
             Don&apos;t wait for the perfect moment. The best time to start was yesterday; the second best time is today.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/funds" className="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-2xl transition-all hover:scale-105 shadow-lg shadow-emerald-500/25">
+            <Link href="/funds" className="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-2xl transition-all hover:scale-105 shadow-lg shadow-emerald-500/25">
               Explore Best Funds
-            </a>
+            </Link>
             <a href="/enquiry" className="px-10 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold rounded-2xl transition-all">
               Free Expert Consultation
             </a>

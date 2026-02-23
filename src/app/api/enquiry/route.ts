@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { z } from 'zod/v4';
+import { z } from 'zod';
 import { createLead } from '@/src/lib/leads';
 import nodemailer from 'nodemailer';
 

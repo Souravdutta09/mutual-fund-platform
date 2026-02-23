@@ -1,60 +1,62 @@
-import bcrypt from 'bcryptjs';
+import { ObjectId } from 'mongodb';
 
 export interface User {
-  _id?: string;
+  _id?: ObjectId;
   name: string;
   email: string;
   password: string;
   phone?: string;
   address?: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface Portfolio {
-  _id?: string;
-  userId: string;
-  funds: Array<{
-    fundName: string;
-    fundType: string;
-    units: number;
-    avgCost: number;
-    currentNAV: number;
-    currentValue: number;
-    returns: number;
-    returnsPercentage: number;
-  }>;
+  _id?: ObjectId;
+  userId: ObjectId;
   totalInvestment: number;
   currentValue: number;
-  totalReturns: number;
-  totalReturnsPercentage: number;
-  createdAt: Date;
-  updatedAt: Date;
+  returns: number;
+  returnsPercentage: number;
+  holdings: Holding[];
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface Holding {
+  fundId: string;
+  fundName: string;
+  units: number;
+  averageCost: number;
+  currentValue: number;
+  returns: number;
+  returnsPercentage: number;
 }
 
 export interface Transaction {
-  _id?: string;
-  userId: string;
+  _id?: ObjectId;
+  userId: ObjectId;
+  fundId: string;
   fundName: string;
-  fundType: string;
-  transactionType: 'SIP' | 'LUMPSUM' | 'REDEEM';
+  type: 'SIP' | 'LUMPSUM' | 'REDEEM';
   amount: number;
-  units: number;
-  nav: number;
+  units?: number;
+  nav?: number;
   date: Date;
   status: 'PENDING' | 'COMPLETED' | 'FAILED';
-  createdAt: Date;
+  createdAt?: Date;
 }
 
 export interface InvestmentGoal {
-  _id?: string;
-  userId: string;
-  goalName: string;
+  _id?: ObjectId;
+  userId: ObjectId;
+  name: string;
   targetAmount: number;
   currentAmount: number;
-  monthlyContribution: number;
   targetDate: Date;
+  category: 'RETIREMENT' | 'EDUCATION' | 'HOUSE' | 'CAR' | 'TRAVEL' | 'OTHER';
+  monthlyContribution: number;
   status: 'ACTIVE' | 'COMPLETED' | 'PAUSED';
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }

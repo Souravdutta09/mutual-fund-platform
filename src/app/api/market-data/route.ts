@@ -61,8 +61,8 @@ export async function GET() {
         if (validResults.length === 0) {
             // Return fallback data if API fails
             return NextResponse.json({
-                data: SYMBOLS.slice(0, 10).map((s, i) => ({
-                    symbol: s.name,
+                data: SYMBOLS.slice(0, 10).map((symbol) => ({
+                    symbol: symbol.name,
                     price: (1000 + Math.random() * 3000).toFixed(2),
                     change: ((Math.random() - 0.4) * 50).toFixed(2),
                     changePercent: ((Math.random() - 0.4) * 3).toFixed(2),
