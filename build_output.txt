@@ -1,0 +1,89 @@
+﻿npx : ΓÜá Warning: Next.js 
+inferred your workspace 
+root, but it may not be 
+correct.
+At line:1 char:66
++ ... t -Recurse 
+-ErrorAction 
+SilentlyContinue; npx next 
+build 2>&1 | Out-F ...
++                            
+                   
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (ΓÜá War  
+  ning: Ne...not be correc   
+ t.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+ We detected multiple 
+lockfiles and selected the 
+directory of C:\Users\dutta\p
+ackage-lock.json as the root 
+directory.
+ To silence this warning, 
+set `turbopack.root` in your 
+Next.js config, or consider 
+removing one of the 
+lockfiles if it's not needed.
+   See https://nextjs.org/doc
+s/app/api-reference/config/ne
+xt-config-js/turbopack#root-d
+irectory for more 
+information.
+ Detected additional 
+lockfiles: 
+   * C:\Users\dutta\OneDrive\
+Desktop\current projects\mutu
+al-fund-platform\package-lock
+.json
+
+Γû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 5.8s
+  Running TypeScript ...
+Failed to compile.
+
+.next/types/validator.ts:125:
+39
+Type error: File 'C:/Users/du
+tta/OneDrive/Desktop/current 
+projects/mutual-fund-platform
+/src/app/api/funds/[id]/nav/r
+oute.ts' is not a module.
+
+[0m [90m 123 |[39m {
+ [90m 124 |[39m   type __Is
+Expected[33m<[39m[33mSpeci
+fic[39m [36mextends[39m [
+33mRouteHandlerConfig[39m[3
+3m<[39m[32m"/api/funds/[id]
+/nav"[39m[33m>>[39m 
+[33m=[39m 
+[33mSpecific[39m
+[31m[1m>[22m[39m[90m 
+125 |[39m   [36mconst[39m 
+handler [33m=[39m {} 
+[36mas[39m 
+[36mtypeof[39m [36mimport
+[39m([32m"../../src/app/api/
+funds/[id]/nav/route.js"[39m
+)
+ [90m     |[39m            
+                           
+[31m[1m^[22m[39m
+ [90m 126 |[39m   type 
+__Check [33m=[39m __IsExpec
+ted[33m<[39m[36mtypeof[39
+m handler[33m>[39m
+ [90m 127 |[39m   [90m// 
+@ts-ignore[39m
+ [90m 128 |[39m   type 
+__Unused [33m=[39m 
+__Check[0m
+Next.js build worker exited 
+with code: 1 and signal: null
