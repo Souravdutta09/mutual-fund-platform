@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 const SIPCalculator = () => {
   const [calculationType, setCalculationType] = useState<'goal' | 'sip'>('goal');
@@ -43,9 +44,26 @@ const SIPCalculator = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">SIP Calculator</h2>
           <p className="text-lg text-gray-500">Calculate your Systematic Investment Plan returns</p>
+        </div>
+
+        {/* Goal Planner Callout Banner */}
+        <div className="max-w-4xl mx-auto mb-8 bg-emerald-50/90 border border-emerald-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🎯</span>
+            <div>
+              <p className="text-sm font-bold text-emerald-950">Looking for Inflation-Adjusted Goal Planning?</p>
+              <p className="text-xs text-emerald-800">Plan child education, marriage, home down payment, and retirement with exact inflation targets.</p>
+            </div>
+          </div>
+          <Link
+            href="/goal-planner"
+            className="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-all shrink-0 shadow-sm"
+          >
+            Open Goal Planner →
+          </Link>
         </div>
 
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
@@ -166,9 +184,12 @@ const SIPCalculator = () => {
                 )}
               </div>
 
-              <button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3.5 px-6 rounded-xl font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.01]">
-                Start SIP
-              </button>
+              <Link
+                href={`/enquiry?amount=${results.investedAmount}&message=${encodeURIComponent(`Hi Sourav, I calculated a SIP plan with ₹${results.investedAmount.toLocaleString('en-IN')} total investment over ${period} years. Please advise on best funds to start.`)}`}
+                className="block w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white py-3.5 px-6 rounded-xl font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.01]"
+              >
+                Request Consultation for this SIP Plan
+              </Link>
 
               <div className="text-xs text-gray-400 text-center">
                 <p>Calculator is for educational purposes only. Returns are not guaranteed and depend on market performance.</p>

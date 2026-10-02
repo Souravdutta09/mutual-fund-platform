@@ -12,18 +12,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alok Kumar Dutta — Trusted Mutual Fund Advisor in Mumbai | Free Consultation",
-  description: "Get personalized mutual fund investment guidance from Alok Kumar Dutta — 30+ years of experience, AMFI-registered distributor (ARN-111686). Free consultation for SIP planning, portfolio review, and wealth creation.",
-  keywords: ["mutual fund advisor mumbai", "mutual fund distributor", "SIP planning", "investment advisor", "free consultation", "Alok Kumar Dutta", "AMFI registered"],
+  title: "Sourav Dutta — Mutual Fund Distributor",
+  description: "Personalized mutual fund investment guidance and goal-based financial planning by Sourav Dutta. Mentored by senior financial expert Alok Kumar Dutta (30+ years experience). Free consultation for SIP, portfolio review, and wealth creation.",
+  keywords: ["mutual fund distributor", "Sourav Dutta", "goal planning", "SIP calculator", "portfolio review", "Chakulia", "Jharkhand", "Pune", "mutual fund advisor", "Alok Kumar Dutta"],
   icons: {
-    icon: "/tahi.png",
-    apple: "/tahi.png",
+    icon: "/tree.png",
+    apple: "/tree.png",
   },
   openGraph: {
-    title: "Alok Kumar Dutta — Trusted Mutual Fund Advisor in Mumbai",
-    description: "Get personalized mutual fund investment guidance from one of Mumbai's most experienced advisors. Free consultation available.",
+    title: "Sourav Dutta — Mutual Fund Distributor",
+    description: "Personalized mutual fund investment guidance and goal-based financial planning by Sourav Dutta. Mentored by veteran advisor Alok Kumar Dutta.",
     type: "website",
-    images: [{ url: "/tahi.png", width: 512, height: 512, alt: "Alok Kumar Dutta - Mutual Fund Advisor" }],
+    images: [{ url: "/tahi.png", width: 512, height: 512, alt: "Sourav Dutta - Mutual Fund Distributor" }],
   },
 };
 

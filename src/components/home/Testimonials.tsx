@@ -3,25 +3,25 @@
 import { useEffect, useRef } from 'react';
 
 const row1Testimonials = [
-  { id: 1, name: 'Sourav Dutta', role: 'Software Engineer', company: 'Infosys', content: 'This platform made investing in mutual funds so simple and transparent. The portfolio tracking features are excellent and I can see all my investments in one place!', avatar: 'SD' },
+  { id: 1, name: 'Rahul Sharma', role: 'Senior Software Engineer', company: 'Infosys', content: 'This platform made investing in mutual funds so simple and transparent. The goal planning features are excellent and I can track my SIP milestones effortlessly!', avatar: 'RS' },
   { id: 2, name: 'Debjani Shaha', role: 'Business Owner', company: 'Self-employed', content: 'I love the detailed fund analysis and historical performance data. It helped me make informed investment decisions.', avatar: 'DS' },
   { id: 3, name: 'Amit Kumar', role: 'Marketing Professional', company: 'HUL', content: 'The user interface is intuitive and the customer support is outstanding. Highly recommend for both beginners and experienced investors.', avatar: 'AK' },
-  { id: 4, name: 'Sneha Desai', role: 'Doctor', company: 'Apollo Hospitals', content: 'As a busy professional, I needed a trustworthy advisor. Alok sir simplified everything and my portfolio has grown steadily over 5 years. His patience in explaining every detail is commendable.', avatar: 'SD' },
+  { id: 4, name: 'Sneha Desai', role: 'Doctor', company: 'Apollo Hospitals', content: 'As a busy doctor, I needed trustworthy guidance. Sourav simplified our family portfolio with complete transparency and patient explanation.', avatar: 'SD' },
   { id: 5, name: 'Vikram Joshi', role: 'Retired Bank Manager', company: 'SBI', content: 'After retirement, I wanted safe yet growing investments. The guidance I received here was exceptional — my money works for me now.', avatar: 'VJ' },
-  { id: 6, name: 'Anita Mehta', role: 'School Teacher', company: 'DPS', content: 'Started with just \u20B91,000 SIP and now my children\'s education fund is well on track. Grateful for the patient and honest advice.', avatar: 'AM' },
-  { id: 7, name: 'Rajesh Iyer', role: 'IT Manager', company: 'TCS', content: 'I was skeptical about mutual funds initially, but the transparent approach and consistent returns over 3 years have made me a believer. Excellent advisory!', avatar: 'RI' },
+  { id: 6, name: 'Anita Mehta', role: 'School Teacher', company: 'DPS', content: 'Started with just ₹1,000 SIP and now my children\'s education fund is well on track. Grateful for the patient and honest advice.', avatar: 'AM' },
+  { id: 7, name: 'Rajesh Iyer', role: 'IT Manager', company: 'TCS', content: 'I was skeptical about mutual funds initially, but the transparent approach and disciplined portfolio reviews have made me a believer.', avatar: 'RI' },
   { id: 8, name: 'Pooja Reddy', role: 'Architect', company: 'Self-employed', content: 'The SIP recommendations were perfectly aligned with my financial goals. I appreciate the regular portfolio reviews and honest feedback.', avatar: 'PR' },
 ];
 
 const row2Testimonials = [
-  { id: 9, name: 'Somojit Dutta', role: 'Chartered Accountant', company: 'Deloitte', content: 'The tax-saving ELSS recommendations were spot on. Professional service with a personal touch — exactly what you need in a financial advisor. I have recommended Alok sir to many of my clients.', avatar: 'SD' },
+  { id: 9, name: 'Somojit Dutta', role: 'Chartered Accountant', company: 'Deloitte', content: 'The tax-saving ELSS recommendations were spot on. Professional service with a personal touch — combining tech efficiency with seasoned market guidance.', avatar: 'SD' },
   { id: 10, name: 'Meera Nair', role: 'Homemaker', company: '', content: 'I had zero knowledge about mutual funds. The team explained everything patiently and helped me start investing confidently.', avatar: 'MN' },
   { id: 11, name: 'Sanjay Gupta', role: 'Entrepreneur', company: 'TechVentures', content: 'Managing business finances and personal investments is complex. Having a dedicated advisor who understands both has been invaluable for my family\'s financial security.', avatar: 'SG' },
-  { id: 12, name: 'Kavita Sharma', role: 'HR Director', company: 'Wipro', content: 'What sets this service apart is the personal attention. Alok sir remembers every conversation and always follows up. My portfolio has grown 18% in just two years.', avatar: 'KS' },
+  { id: 12, name: 'Kavita Sharma', role: 'HR Director', company: 'Wipro', content: 'What sets this service apart is the personal attention. Sourav always follows up with prompt portfolio updates and proactive reviews.', avatar: 'KS' },
   { id: 13, name: 'Nikhil Banerjee', role: 'Civil Engineer', company: 'L&T', content: 'I started investing late at 40, but the customized plan helped me catch up fast. Now I feel confident about my retirement. Best decision I ever made.', avatar: 'NB' },
   { id: 14, name: 'Deepa Krishnan', role: 'Pharmacist', company: 'Cipla', content: 'The monthly performance reports and market insights keep me informed without overwhelming me. Truly professional and caring service.', avatar: 'DK' },
-  { id: 15, name: 'Arjun Malhotra', role: 'Consultant', company: 'McKinsey', content: 'I have worked with many financial advisors, but none have been as transparent and dedicated as Alok sir. His risk assessment approach is thorough and methodical.', avatar: 'AM' },
-  { id: 16, name: 'Sunita Agarwal', role: 'Retired Professor', company: 'IIT Bombay', content: 'After my husband passed, I needed someone trustworthy to manage our savings. Alok sir handled everything with utmost care and sensitivity. Forever grateful.', avatar: 'SA' },
+  { id: 15, name: 'Arjun Malhotra', role: 'Consultant', company: 'McKinsey', content: 'I have worked with many financial advisors, but none have been as transparent and dedicated as this team. The risk assessment approach is thorough and methodical.', avatar: 'AM' },
+  { id: 16, name: 'Sunita Agarwal', role: 'Retired Professor', company: 'IIT Bombay', content: 'After my husband passed, I needed someone trustworthy to manage our savings. The team handled everything with utmost care and sensitivity. Forever grateful.', avatar: 'SA' },
 ];
 
 const gradients = [

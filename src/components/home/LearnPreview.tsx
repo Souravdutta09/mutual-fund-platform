@@ -61,7 +61,7 @@ export function LearnPreview() {
                         <div className="relative z-10">
                             <div className="inline-block px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-bold rounded-full mb-4">MEMBER SPECIAL</div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Masterclass: Building Your First 1 Cr Portfolio</h3>
-                            <p className="text-gray-500 text-sm mb-6 font-inter">Join Alok Kumar Dutta as he reveals the strategies used by top investors to build multi-generational wealth.</p>
+                            <p className="text-gray-500 text-sm mb-6 font-inter">Explore disciplined mutual fund frameworks and compounding strategies used to build lasting generational wealth.</p>
                             <div className="flex items-center gap-4 text-sm text-gray-400">
                                 <div className="flex items-center gap-1">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>

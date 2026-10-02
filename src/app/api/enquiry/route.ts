@@ -32,7 +32,7 @@ export async function POST(request: Request) {
             subject: `New Consultation Request from ${parsed.name}`,
             html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #059669;">New Consultation Request</h2>
+            <h2 style="color: #196144;">New Consultation Request - Sourav Dutta Wealth</h2>
             <table style="width: 100%; border-collapse: collapse;">
               <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Name</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${parsed.name}</td></tr>
               <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Email</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${parsed.email}</td></tr>

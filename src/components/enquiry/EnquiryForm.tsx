@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 type FieldErrors = {
     name?: string;
@@ -39,6 +40,7 @@ function validateField(name: string, value: string): string {
 }
 
 export default function EnquiryForm() {
+    const searchParams = useSearchParams();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -46,6 +48,28 @@ export default function EnquiryForm() {
         phone: '',
         message: '',
     });
+
+    useEffect(() => {
+        const goal = searchParams.get('goal');
+        const target = searchParams.get('target');
+        const sip = searchParams.get('sip');
+        const years = searchParams.get('years');
+        const fund = searchParams.get('fund');
+
+        if (goal) {
+            const formattedTarget = target ? Number(target).toLocaleString('en-IN') : '';
+            const formattedSIP = sip ? Number(sip).toLocaleString('en-IN') : '';
+            setFormData(prev => ({
+                ...prev,
+                message: `Hi Sourav, I am planning for: "${goal}" (${years || ''} years horizon). Inflation-adjusted target is ₹${formattedTarget} with required SIP of ₹${formattedSIP}/mo. Please guide me with an optimal mutual fund portfolio.`
+            }));
+        } else if (fund) {
+            setFormData(prev => ({
+                ...prev,
+                message: `Hi Sourav, I would like consultation and advice regarding: ${fund}.`
+            }));
+        }
+    }, [searchParams]);
 
     const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
     const [touched, setTouched] = useState<Record<string, boolean>>({});

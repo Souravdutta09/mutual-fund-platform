@@ -54,6 +54,10 @@ const Navbar = () => {
               )}
             </div>
 
+            <Link href="/goal-planner" className="text-gray-600 hover:text-slate-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 flex items-center gap-1.5">
+              <span>Goal Planner</span>
+              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-brand-100 text-brand-700">New</span>
+            </Link>
             <Link href="/sip-calculator" className="text-gray-600 hover:text-slate-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100">SIP Calculator</Link>
             <Link href="/about" className="text-gray-600 hover:text-slate-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100">About</Link>
 
@@ -118,6 +122,10 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
+              <Link href="/goal-planner" className="flex items-center justify-between text-gray-700 hover:text-slate-900 px-3 py-2.5 text-base font-medium transition-colors rounded-lg hover:bg-gray-50">
+                <span>Goal Planner</span>
+                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-brand-100 text-brand-700">New</span>
+              </Link>
               <Link href="/sip-calculator" className="block text-gray-700 hover:text-slate-900 px-3 py-2.5 text-base font-medium transition-colors rounded-lg hover:bg-gray-50">SIP Calculator</Link>
               <Link href="/about" className="block text-gray-700 hover:text-slate-900 px-3 py-2.5 text-base font-medium transition-colors rounded-lg hover:bg-gray-50">About</Link>
               <div>

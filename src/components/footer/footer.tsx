@@ -13,8 +13,8 @@ const Footer = () => {
 
           <div className="lg:col-span-2 xl:col-span-2">
             <Logo size="lg" variant="light" />
-            <p className="text-gray-400 mb-4 max-w-sm leading-relaxed">
-              One of Mumbai&apos;s oldest mutual fund distributors, serving investors with trust and personalized service for decades.
+            <p className="text-gray-400 mb-4 max-w-sm leading-relaxed text-sm">
+              Technology-driven mutual fund distribution and goal planning by Sourav Dutta, guided by the 30-year veteran market direction of Alok Kumar Dutta.
             </p>
             <div className="bg-slate-800 border border-slate-700 rounded-xl p-3 mb-4">
               <p className="text-xs text-gray-400">
@@ -26,20 +26,20 @@ const Footer = () => {
           <div>
             <h4 className="text-base font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Mutual Fund Investments</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">SIP Planning</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Lumpsum Investments</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Portfolio Review</Link></li>
+              <li><Link href="/funds" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Mutual Funds Explorer</Link></li>
+              <li><Link href="/goal-planner" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm font-medium flex items-center gap-1.5">Goal Planner <span className="text-[9px] uppercase px-1 py-0.5 rounded bg-emerald-900 text-emerald-300 font-bold">New</span></Link></li>
+              <li><Link href="/sip-calculator" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">SIP Calculator</Link></li>
+              <li><Link href="/enquiry" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Portfolio Review</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-white mb-4">Experience</h4>
+            <h4 className="text-base font-semibold text-white mb-4">About &amp; Advisory</h4>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">About Alok Kumar Dutta</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Our Legacy in Mumbai</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Investor Testimonials</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Service Philosophy</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">About Sourav Dutta</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Mentorship by Alok Kumar Dutta</Link></li>
+              <li><Link href="/learn" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Financial Education</Link></li>
+              <li><Link href="/enquiry" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">Book Free Consultation</Link></li>
             </ul>
           </div>
 
@@ -64,7 +64,18 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white">Phone</p>
-                  <a href="tel:9982264133" className="text-emerald-400 hover:text-emerald-300">9982264133</a>
+                  <a href="tel:8768436800" className="text-emerald-400 hover:text-emerald-300">8768436800</a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium text-white">Email</p>
+                  <a href="mailto:sourav.academics09@gmail.com" className="text-emerald-400 hover:text-emerald-300 break-all">sourav.academics09@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -76,7 +87,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white">Office Address</p>
-                  <p className="text-gray-400">Bandra, Mumbai</p>
+                  <p className="text-gray-400">Chakulia, East Singhbhum, Jharkhand - 832301</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -116,8 +127,8 @@ const Footer = () => {
           <div className="border-t border-slate-800 pt-6">
             <h4 className="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">AMFI / Regulatory Information</h4>
             <p className="text-xs text-gray-400 leading-relaxed">
-              Alok Kumar Dutta is a AMFI-registered Mutual Fund Distributor. AMFI Registration No: ARN-111686.
-              For any grievances related to Mutual Fund distribution, please write to <span className="text-emerald-400">grievances@alokkumardutta.com</span>.
+              Sourav Dutta is an AMFI-registered Mutual Fund Distributor (ARN: In-Process). Mentored by veteran financial advisor Alok Kumar Dutta.
+              For any grievances related to Mutual Fund distribution, please write to <span className="text-emerald-400">sourav.academics09@gmail.com</span>.
               Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI/AMFI.
             </p>
             <p className="text-xs text-gray-400 leading-relaxed mt-2">
@@ -133,7 +144,7 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Disclaimer</h4>
             <div className="space-y-3 text-xs text-gray-400 leading-relaxed">
               <p>
-                Alok Kumar Dutta makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services.
+                Sourav Dutta makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services.
               </p>
               <p>
                 Unless otherwise specified, all returns, expense ratio, NAV, etc. are historical and for illustrative purposes only. Future performance will vary greatly and depends on personal and market circumstances. The information provided on this website is educational only and is not investment or tax advice.
@@ -154,7 +165,7 @@ const Footer = () => {
         {/* ── Copyright & Socials ── */}
         <div className="border-t border-slate-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-500 text-sm">&copy; {currentYear} Alok Kumar Dutta. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">&copy; {currentYear} Sourav Dutta. All rights reserved.</p>
             <div className="flex space-x-4">
               <Link href="#" className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-slate-700 transition-all">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
